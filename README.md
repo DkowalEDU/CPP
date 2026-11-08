@@ -1,1 +1,1 @@
-# CPP
+**Historia i zastosowanie:** Język C++ wywodzi się z języka C (początkowo nazywanego "C z klasami"), a jego nazwa pochodzi od operatora inkrementacji ++, co jest informatycznym żartem oznaczającym "C o jeden poziom wyżej". C++ stosuje się m.in. w Gamedevie (silniki np. Unreal Engine), systemach operacyjnych (Windows, Linux, macOS), przeglądarkach internetowych, systemach wbudowanych (IoT, samochody, statki kosmiczne) oraz w finansach (High-Frequency Trading) z powodu minimalnych opóźnień
