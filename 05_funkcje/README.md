@@ -42,3 +42,12 @@ Każda funkcja w C++ składa się z kilku podstawowych elementów. Deklaracja i 
 **Przykład**
 
   <img width="708" height="401" alt="image" src="https://github.com/user-attachments/assets/fb0d8cc2-70b4-48d2-8301-1909940235ab" />
+
+**Przesłanianie zmiennych (Shadowing)**
+* Zjawisko przesłaniania występuje wtedy, gdy wewnątrz zagnieżdżonego bloku kodu (np. w funkcji, instrukcji warunkowej czy pętli) utworzymy nową zmienną o dokładnie takiej samej nazwie, jaką nosi już istniejąca zmienna w szerszym zasięgu (np. zmienna globalna). W takiej sytuacji kompilator C++ zawsze daje pierwszeństwo zmiennej „najbliższej” (najbardziej lokalnej). Nowa zmienna przykrywa (przesłania) tę starszą. Jakakolwiek operacja na tej nazwie zmodyfikuje tylko zmienną lokalną, pozostawiając zewnętrzną zmienną w stanie nienaruszonym. Warto pamiętać, że jeśli przesłonimy zmienną globalną, nadal możemy się do niej dostać, używając operatora globalnego zasięgu ::.
+
+**Cykl życia zmiennych w pamięci**
+
+* Cykl życia zmiennej to czas, w którym fizycznie zajmuje ona miejsce w pamięci operacyjnej komputera. W przypadku zmiennych lokalnych cykl ten jest ściśle dyktowany przez nawiasy klamrowe {}. Zmienna lokalna „rodzi się” (otrzymuje przydział pamięci) w momencie, gdy program natrafia na jej deklarację. Jej życie kończy się natomiast natychmiast po dotarciu do klamry zamykającej } danego bloku kodu. Wtedy pamięć jest automatycznie zwalniana i zwracana systemowi. Dzięki takiemu mechanizmowi program przechowuje w pamięci tylko te zmienne, które są mu w danej chwili potrzebne, co optymalizuje jego działanie.
+
+<img width="818" height="570" alt="image" src="https://github.com/user-attachments/assets/16fcaca4-659c-4218-8650-93f53a9bad39" />
