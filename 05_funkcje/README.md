@@ -66,3 +66,22 @@ Zalety tego rozwiązania:
 * Oszczędzamy pamięć i czas procesora. Przy prostych liczbach nie ma to wielkiego znaczenia, ale jeśli przekazujemy do funkcji ogromny tekst (string) lub duży zbiór danych, kopiowanie całości byłoby bardzo nieoptymalne.
 
   <img width="758" height="530" alt="image" src="https://github.com/user-attachments/assets/ccd64cdd-b8be-4ca3-9ed1-ed6932744402" />
+
+
+
+**Modyfikowanie wielu zmiennych naraz przez referencję**
+
+Zgodnie ze swoimi założeniami, klasyczna instrukcja return potrafi zwrócić z funkcji tylko jedną wartość naraz. Często jednak zdarza się, że funkcja wykonuje złożone obliczenia i musi oddać nam kilka różnych wyników (np. pole i obwód figury, albo sumę i różnicę podanych liczb).
+
+Zamiast pakować te dane w złożone struktury, możemy wykorzystać mechanizm referencji. Przekazując zmienne z zewnętrznego zasięgu przez operator &, pozwalamy funkcji na ich bezpośrednią modyfikację. Funkcja wykonuje swoją pracę, zapisuje wyniki we wskazanych zmiennych, a po jej zakończeniu, zmodyfikowane dane są od razu dostępne w miejscu wywołania.
+
+<img width="923" height="447" alt="image" src="https://github.com/user-attachments/assets/4936ae5c-6e92-4bc4-b07a-6ba03b4cbc1b" />
+
+
+**Definiowanie argumentów domyślnych**
+
+Język C++ pozwala na zdefiniowanie wartości domyślnych dla parametrów funkcji w jej sygnaturze. Dzięki temu funkcja staje się bardziej elastyczna – użytkownik może podać wszystkie argumenty przy wywołaniu, ale jeśli pominie te zdefiniowane jako domyślne, kompilator automatycznie podstawi za nie przygotowane wcześniej wartości.
+
+Najważniejsza zasada: Kompilator czyta argumenty od lewej do prawej. Z tego powodu wszystkie parametry posiadające wartość domyślną muszą znajdować się na samym końcu listy parametrów (czyli po prawej stronie sygnatury). Nie można stworzyć funkcji, w której pierwszy argument jest domyślny, a drugi obowiązkowy.
+
+<img width="793" height="465" alt="image" src="https://github.com/user-attachments/assets/378a48b6-612e-48d2-8a91-a41061b3735f" />
