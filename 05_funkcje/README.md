@@ -29,3 +29,16 @@ Każda funkcja w C++ składa się z kilku podstawowych elementów. Deklaracja i 
 * **Funkcja zwracająca wartość** -  Najczęściej chcemy, aby funkcja wykonała obliczenia i oddała nam wynik, który potem przypiszemy do zmiennej lub wykorzystamy w dalszej logice.
 
 <img width="962" height="632" alt="image" src="https://github.com/user-attachments/assets/f0f4d524-2b3c-4ade-ba7c-1b36fc22e0ea" />
+
+
+**W C++ zasięg zmiennej (scope) określa, w którym miejscu w kodzie dana zmienna jest widoczna i możliwa do użycia. Wyróżniamy dwa podstawowe rodzaje zmiennych:**
+
+**Zmienne globalne**
+* Są to zmienne zadeklarowane poza jakimikolwiek funkcjami, najczęściej na samej górze pliku z kodem. Ich główną cechą jest to, że każda funkcja w programie ma do nich bezpośredni dostęp – może odczytywać ich wartość oraz dowolnie ją modyfikować. Ich cykl życia w pamięci trwa przez cały czas działania programu, od jego uruchomienia aż do zakończenia. Choć początkującym wydają się bardzo wygodne, w dobrej praktyce programistycznej stanowczo unika się ich stosowania. Współdzielenie stanu przez cały program sprawia, że przy wystąpieniu błędu niezwykle trudno zlokalizować fragment kodu, który nieoczekiwanie zmienił wartość naszej zmiennej.
+  
+**Zmienne lokalne**
+* To zmienne powołane do życia wewnątrz konkretnej funkcji lub dowolnego bloku kodu ograniczonego nawiasami klamrowymi {}. Zmienna lokalna istnieje w pamięci tylko i wyłącznie przez czas wykonywania danej funkcji – gdy funkcja kończy swoje działanie, zmienna jest natychmiast i bezpowrotnie z niej usuwana. Zmienne lokalne są całkowicie niewidoczne dla innych funkcji. To preferowany i najbezpieczniejszy sposób pracy z danymi, ponieważ czyni kod hermetycznym, ułatwia szukanie błędów i chroni nas przed przypadkowym nadpisaniem wartości przez inne moduły programu.
+
+**Przykład**
+
+  <img width="708" height="401" alt="image" src="https://github.com/user-attachments/assets/fb0d8cc2-70b4-48d2-8301-1909940235ab" />
